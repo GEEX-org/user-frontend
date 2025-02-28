@@ -53,9 +53,22 @@ export const Appbar = () => {
             transition={{ duration: 0.5, ease: "easeOut" }}
         >
             {/* Left: Logo */}
-            <div className="text-3xl font-bold bg-gradient-to-r from-purple-700 to-purple-500 bg-clip-text text-transparent">
+            {/* <div className="text-3xl font-bold bg-gradient-to-r from-purple-700 to-purple-500 bg-clip-text text-transparent">
                 Defi-Tasker
-            </div>
+            </div> */}
+
+           <motion.div
+                className="flex items-center pl-4"
+                whileHover={{ scale: 1.05 }}
+            >
+                {/* Placeholder for Logo */}
+                <div className="h-8 w-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-2">
+                    D
+                </div>
+                <span className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">
+                    DeFi-Tasker
+                </span>
+            </motion.div>
 
             {/* Desktop & Tablet Wallet Button */}
             <div className="hidden md:flex text-lg">

@@ -95,6 +95,18 @@ export const Upload = () => {
                     >
                         Add Images
                     </motion.label>
+                    <div className="flex justify-center pt-4 max-w-screen-lg flex-wrap gap-2">
+                        {images.map((image, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                            >
+                                <UploadImage image={image} onImageAdded={(imageUrl) => setImages(i => [...i, imageUrl])} />
+                            </motion.div>
+                        ))}
+                    </div>
 
                     <motion.label
                         className="block mt-8 text-md font-medium text-purple-300 cursor-pointer"
