@@ -131,7 +131,7 @@ export const Upload = () => {
                     </motion.label>
 
                     <div className="flex justify-center pt-4 max-w-screen-lg flex-wrap gap-2">
-                        {images.map((image, index) => (
+                        {/* {images.map((image, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, scale: 0.8 }}
@@ -140,7 +140,16 @@ export const Upload = () => {
                             >
                                 <UploadImage image={image} onImageAdded={(imageUrl) => setImages(i => [...i, imageUrl])} />
                             </motion.div>
-                        ))}
+                        ))} */}
+                  {images.map((image, index) => (
+                    <UploadImage 
+                        key={index}  // Add a unique key
+                        image={image} 
+                        onImageAdded={(imageUrl) => {
+                        setImages(i => [...i, imageUrl]);
+                        }} 
+                    />
+                ))}
                     </div>
                 </div>
 

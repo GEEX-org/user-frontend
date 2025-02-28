@@ -9,7 +9,7 @@ import { useState } from "react";
 export default function Home() {
 
   return (
-    <main style={{ backgroundColor: '#f0e1d2' }}>
+    <main>
       <Appbar />
       <Hero />
       <Upload />
